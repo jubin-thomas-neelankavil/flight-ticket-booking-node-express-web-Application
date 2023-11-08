@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Flights</title>
+</head>
+<body>
+  <h1>List of Flights</h1>
+  <ul>
+    <% if (flights && flights.length > 0) { %>
+      <% flights.forEach(function (flight) { %>
+        <li>
+          <strong>Flight Number:</strong> <%= flight.flightNumber %><br>
+          <strong>Departure:</strong> <%= flight.departure %><br>
+          <strong>Arrival:</strong> <%= flight.arrival %>
+        </li>
+      <% }); %>
+    <% } else { %>
+      <p>No flights available.</p>
+    <% } %>
+  </ul>
+  <a href="/flights">Back to Flight Management</a>
+</body>
+</html>

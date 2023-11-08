@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Trips</title>
+</head>
+<body>
+  <h1>Your Trips</h1>
+  <ul>
+    <% if (trips && trips.length > 0) { %>
+      <% trips.forEach(function (trip) { %>
+        <li>
+          <strong>Destination:</strong> <%= trip.destination %><br>
+          <strong>Start Date:</strong> <%= trip.startDate %><br>
+          <strong>End Date:</strong> <%= trip.endDate %>
+        </li>
+      <% }); %>
+    <% } else { %>
+      <p>You haven't planned any trips yet.</p>
+    <% } %>
+  </ul>
+  <a href="/flights">View Flights</a>
+</body>
+</html>
